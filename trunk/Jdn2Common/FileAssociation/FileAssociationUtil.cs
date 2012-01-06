@@ -8,7 +8,7 @@ namespace Jdn2Common.FileAssociation
     public static class FileAssociationUtil<T>
     {
         /// <summary>
-        /// The function tbat associates a name (directory or file) with its association.
+        /// The function that associates a name (directory or file) with its association.
         /// This can be anything: a DB call, read file and get contents, etc.
         /// </summary>
         /// <typeparam name="T"></typeparam>
