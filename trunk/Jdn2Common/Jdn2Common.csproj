@@ -1,0 +1,130 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{823D809C-833C-4D91-A57E-CBD40B1279E2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Jdn2Common</RootNamespace>
+    <AssemblyName>Jdn2Common</AssemblyName>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Attributes\AttributeUtil.cs" />
+    <Compile Include="Attributes\BaseAttributes.cs" />
+    <Compile Include="Attributes\ViewProperties.cs" />
+    <Compile Include="CollectionUtil.cs" />
+    <Compile Include="CountryUtil.cs" />
+    <Compile Include="Country\pt_BR.cs" />
+    <Compile Include="DataMapping\DataMappingEntry.cs" />
+    <Compile Include="DataMapping\DataMappingEntrySet.cs" />
+    <Compile Include="DataMapping\DataMappingStatus.cs" />
+    <Compile Include="DataUtil.cs" />
+    <Compile Include="Db\ConnectionParametersManager.cs" />
+    <Compile Include="Db\DbDateOptions.cs" />
+    <Compile Include="Db\DbFamily.cs" />
+    <Compile Include="Db\QueryBuilder.cs" />
+    <Compile Include="Delegates.cs" />
+    <Compile Include="Dictionary.cs" />
+    <Compile Include="DictionaryUtil.cs" />
+    <Compile Include="Email\EmailContent.cs" />
+    <Compile Include="Email\EmailContentMap.cs" />
+    <Compile Include="Email\EmailParameters.cs" />
+    <Compile Include="Email\EmailUtil.cs" />
+    <Compile Include="Db\DbWhereOptions.cs" />
+    <Compile Include="FileAssociation\FileAssociationNode.cs" />
+    <Compile Include="FileAssociation\FileAssociationRootNode.cs" />
+    <Compile Include="FileAssociation\FileAssociationUtil.cs" />
+    <Compile Include="Ftp\Ftp.cs" />
+    <Compile Include="Ftp\FtpParameters.cs" />
+    <Compile Include="ImageUtil.cs" />
+    <Compile Include="Interface\IId.cs" />
+    <Compile Include="KeyValuePair.cs" />
+    <Compile Include="Log\LogLevel.cs" />
+    <Compile Include="Log\LogManager.cs" />
+    <Compile Include="Log\LogMessage.cs" />
+    <Compile Include="Permissions\PermissionsParameters.cs" />
+    <Compile Include="Permissions\Role.cs" />
+    <Compile Include="Permissions\User.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Db\ConnectionFactory.cs" />
+    <Compile Include="Db\ConnectionParameters.cs" />
+    <Compile Include="Db\DbQueryOptions.cs" />
+    <Compile Include="Db\DbUtil.cs" />
+    <Compile Include="StringUtil.cs" />
+    <Compile Include="Util.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Email\Content\pt-BR\EmailHtml.xml" />
+    <Content Include="Email\Content\pt-BR\EmailText.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
